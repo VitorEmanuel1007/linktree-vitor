@@ -1,27 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Links</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; padding: 50px; }
-        .container { max-width: 400px; margin: auto; }
-        .profile-pic { width: 100px; border-radius: 50%; }
-        .link { display: block; background: #000; color: #fff; padding: 15px; margin: 10px 0; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .link:hover { background: #333; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Brainrots – Fuja do Tsunami</title>
+
+  <!-- Fonte estilo vampírica -->
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      background: radial-gradient(circle at top, #1a0000, #000000 70%);
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #120000, #000000);
+      border-bottom: 2px solid #7f0000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Metal Mania', cursive;
+      font-size: 3rem;
+      color: #b30000;
+      text-shadow: 0 0 15px rgba(179, 0, 0, 0.8);
+      animation: pulse 2.5s infinite;
+    }
+
+    header p {
+      margin-top: 15px;
+      color: #d4afaf;
+      letter-spacing: 1px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 15px rgba(179,0,0,0.6); }
+      50% { text-shadow: 0 0 30px rgba(179,0,0,1); }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .card {
+      position: relative;
+      background: linear-gradient(160deg, #0a0000, #1a0000);
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #550000;
+      box-shadow: 0 0 30px rgba(120, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,0,0,0.15), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 50px rgba(200, 0, 0, 0.8);
+    }
+
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-family: 'Metal Mania', cursive;
+      color: #e60000;
+      font-size: 1.8rem;
+    }
+
+    .card p {
+      margin: 0 0 25px 0;
+      color: #f0caca;
+      font-size: 0.95rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ff3b3b;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px rgba(255,0,0,0.6);
+    }
+
+    .card button {
+      padding: 14px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #7f0000, #ff0000);
+      color: #000000;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+    }
+
+    .card button:hover {
+      background: linear-gradient(135deg, #ff0000, #ff4d4d);
+      box-shadow: 0 0 25px rgba(255,0,0,0.9);
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 30px 20px;
+      text-align: center;
+      background: #000000;
+      border-top: 2px solid #7f0000;
+      color: #a3a3a3;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://github.com/TEU_USUARIO.png" class="profile-pic">
-        <h1>@TeuNome</h1>
-        <p>Bem-vindo aos meus links!</p>
-        
-        <a href="https://instagram.com/teu" class="link">Instagram</a>
-        <a href="https://livepix.gg/vitorbrainrot00710" class="link">LinkedIn</a>
-        <a href="https://wa.me/teu_numero" class="link">WhatsApp</a>
-    </div>
+  <header>
+    <h1>🩸 Loja de Brainrots 🩸</h1>
+      <p>Fuja do Tsunami Para Brainrots</p>
+  </header>
+
+  <main class="container">
+    <div class="card"><h2>Brainrot $1T</h2><p>Geração de <strong>$1T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $5T</h2><p>Geração de <strong>$5T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $10T</h2><p>Geração de <strong>$10T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $15T</h2><p>Geração de <strong>$15T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $20T</h2><p>Geração de <strong>$20T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $30T</h2><p>Geração de <strong>$30T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+    <div class="card"><h2>Brainrot $50T</h2><p>Geração de <strong>$50T por segundo</strong>.</p><div class="price">R$ ?</div><button onclick="comprar()">Comprar</button></div>
+  </main>
+
+  <footer>
+    <p>⚠️ Este site não é afiliado oficialmente ao Roblox.</p>
+    <p>© 2026 - Loja de Brainrots • Estilo Vampírico</p>
+  </footer>
+  <script>
+    function comprar() {
+      // 🔗 COLE AQUI O LINK PARA ONDE O BOTÃO DEVE LEVAR
+      const linkCompra = "https://web.whatsapp.com/";
+
+      window.open(linkCompra, "_blank");
+    }
+  </script>
 </body>
 </html>
+
+
 
